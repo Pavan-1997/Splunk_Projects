@@ -50,8 +50,9 @@ Before starting the project, ensure the following:
 - Open Splunk interface and navigate to the search bar.
 - Enter the following search query to retrieve FTP events
 ```
-index=<your_ftp_index> sourcetype=<your_ftp_sourcetype>
+index=main sourcetype=ftp
 ```
+<img width="1914" height="910" alt="image" src="https://github.com/user-attachments/assets/6a7ecda9-8095-4dbe-aed3-0c9712ec5066" />
 
 ### 2.  Extract Relevant Fields
 - Identify key fields in FTP logs such as timestamps, source IP, username, commands, filenames, etc.
@@ -61,6 +62,7 @@ index=<your_ftp_index> sourcetype=<your_ftp_sourcetype>
 | rex field=_raw "^(?<timestamp>\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}).*?(?<source_ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?(?<username>\w+).*?(?<command>[A-Z]+).*?(?<file_path>\/[\w\/.-]+)
 "
 ```
+<img width="1908" height="907" alt="image" src="https://github.com/user-attachments/assets/0edf29e8-25bb-4ad0-8445-9beee014c76c" />
 
 Explanation:
 - `^`: Start of the line.
