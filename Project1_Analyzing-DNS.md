@@ -59,7 +59,7 @@ index=* sourcetype=dns_sample
 - As mentioned below,  | regex _raw="(?i)\b(dns|domain|query|response|port 53)\b": This regex searches for common DNS-related keywords in the raw event data.
 - Example extraction command:
 ```
-index=* sourcetype=dns_sample | regex _raw="(?i)\b(dns|domain|query|response|port 53)\b"
+index=* sourcetype=dns | regex _raw="(?i)\b(dns|domain|query|response|port 53)\b"
 ```
 <img width="1898" height="911" alt="image" src="https://github.com/user-attachments/assets/740e236d-977e-4a1f-8e03-a2228bfe6301" />
 
