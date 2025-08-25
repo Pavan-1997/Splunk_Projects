@@ -84,13 +84,20 @@ index=* sourcetype=dns | top fqdn, src_ip
 ```
 <img width="1913" height="843" alt="image" src="https://github.com/user-attachments/assets/ab4d623c-feee-413f-82e9-cc4fd7743487" />
 
-### 5. Investigate Suspicious Domains
+### 5. View in form of a Table for fqdn, source IP, destination IP
+```
+index=* sourcetype=dns | table fqdn, src_ip, dst_ip
+```
+<img width="1901" height="912" alt="image" src="https://github.com/user-attachments/assets/436bbc94-e952-45a2-86f8-67dfb63f0a97" />
+
+### 6. Investigate Suspicious Domains
 - Search for domains associated with known malicious activity or suspicious behavior.
 - Utilize threat intelligence feeds or reputation databases to identify malicious domains such virustotal.com
-- Example search for known malicious domains:
+- Example search for known malicious domains we can also use commands like "table" and "dedup" to filter:
 ```
-index=* sourcetype=dns_sample fqdn="maliciousdomain.com"
+index=* fqdn="44.206.168.192.in-addr.arpa"
 ```
+<img width="1904" height="908" alt="image" src="https://github.com/user-attachments/assets/7d8c49dc-6e07-4166-a239-ebc9d9f06ff5" />
 
 ## Conclusion
 Analyzing DNS log files using Splunk SIEM enables security professionals to detect and respond to potential security incidents effectively. By understanding DNS activity and identifying anomalies, organizations can enhance their overall security posture and protect against various cyber threats.
