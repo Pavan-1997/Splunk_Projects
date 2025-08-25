@@ -61,13 +61,21 @@ index=* sourcetype=dns_sample
 ```
 index=* sourcetype=dns_sample | regex _raw="(?i)\b(dns|domain|query|response|port 53)\b"
 ```
+<img width="1898" height="911" alt="image" src="https://github.com/user-attachments/assets/740e236d-977e-4a1f-8e03-a2228bfe6301" />
+
+We now go with the Extraction of Feilds from the Logs (src_ip, dst_ip, fqdn and record_type) as below 
+
+<img width="1914" height="917" alt="image" src="https://github.com/user-attachments/assets/f4cf80ab-0c77-4620-a63c-fd71f9a3fb18" />
+
+<img width="1903" height="724" alt="image" src="https://github.com/user-attachments/assets/6914b119-75c8-4a8c-a19c-8cad7241c7e6" />
 
 ### 3. Identify Anomalies
 - Look for unusual patterns or anomalies in DNS activity.
 - Example query to identify spikes
 ```
-index=_* OR index=* sourcetype=dns_sample  | stats count by fqdn
+index=* sourcetype=dns  | stats count by fqdn
 ```
+<img width="1914" height="906" alt="image" src="https://github.com/user-attachments/assets/21041df0-4d94-4767-8458-bbc2c0a73d29" />
 
 ### 4. Find the top DNS sources
 - Use the top command to count the occurrences of each query type:   
