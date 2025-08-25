@@ -93,7 +93,7 @@ index=* sourcetype=dns | table fqdn, src_ip, dst_ip
 ### 6. Investigate Suspicious Domains
 - Search for domains associated with known malicious activity or suspicious behavior.
 - Utilize threat intelligence feeds or reputation databases to identify malicious domains such virustotal.com
-- Example search for known malicious domains we can also use commands like "table" and "dedup" to filter:
+- Example search for known malicious domains we can also use commands like `table` and `dedup` to filter:
 ```
 index=* fqdn="44.206.168.192.in-addr.arpa"
 ```
