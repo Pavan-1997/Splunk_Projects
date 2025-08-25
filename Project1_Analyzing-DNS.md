@@ -80,10 +80,9 @@ index=* sourcetype=dns  | stats count by fqdn
 ### 4. Find the top DNS sources
 - Use the top command to count the occurrences of each query type:   
 ```
-index=* sourcetype=dns_sample | top fqdn, src_ip
+index=* sourcetype=dns | top fqdn, src_ip
 ```
-
-
+<img width="1913" height="843" alt="image" src="https://github.com/user-attachments/assets/ab4d623c-feee-413f-82e9-cc4fd7743487" />
 
 ### 5. Investigate Suspicious Domains
 - Search for domains associated with known malicious activity or suspicious behavior.
