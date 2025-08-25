@@ -51,7 +51,7 @@ Before analyzing DNS logs in Splunk, ensure the following:
 - Open Splunk interface and navigate to the search bar.   
 - Enter the following search query to retrieve DNS events   
 ```
-index=* sourcetype=dns_sample
+index=* sourcetype=dns
 ```
 
 ### 2. Extract Relevant Fields
