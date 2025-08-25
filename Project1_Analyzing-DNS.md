@@ -41,8 +41,9 @@ Before analyzing DNS logs in Splunk, ensure the following:
 - Run a search query to verify that the uploaded DNS events are visible.
   
   ```spl
-  index=<your_dns_index> sourcetype=<your_dns_sourcetype>
+  index="main" sourcetype="dns"
 
+<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/0574d255-ae2a-465d-949c-8deb3fc644a4" />
 
 ## Steps to Analyze DNS Log Files in Splunk SIEM
 
