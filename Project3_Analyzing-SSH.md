@@ -112,4 +112,7 @@ index=<your_ssh_index> sourcetype=<your_ssh_sourcetype>
 | stats range(_time) as session_duration by session_id
 | stats avg(session_duration) as avg_session_duration by user
 ```
+Analyzing SSH log files using Splunk SIEM provides valuable insights into remote access to servers within a network. By monitoring SSH events, detecting anomalies, and correlating with other logs, organizations can enhance their security posture and protect against unauthorized access and potential security threats.
+
+
 
